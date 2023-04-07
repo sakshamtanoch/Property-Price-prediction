@@ -1,18 +1,48 @@
-# Linear Regression Model to Predict Property Prices in Pune
+# Linear Regression Model for Property Price Prediction in Pune, Maharashtra
 
-## Introduction
-This project is about building a linear regression model to predict the price of properties in Pune, India. The dataset used in this project is from Kaggle. However, the data was not good and needed extensive preprocessing in Excel before exploratory data analysis (EDA) could be performed using Google Colab. The purpose of this project was to develop a machine learning model that can accurately predict the price of properties in Pune, based on their features.
+This project focuses on developing a linear regression model to predict the price of properties in Pune, Maharashtra. The data set used for this project is sourced from Kaggle. Exploratory Data Analysis (EDA) was performed to understand the relationship between property prices and various parameters.
 
-## Dataset
-The dataset used in this project is a collection of properties in Pune with their respective features and prices. The dataset contains information about the area of the property, the number of bedrooms, the location, and the builder.
+### The following libraries were used for this project:
+
+1) Plotly for interactive visualization
+2) Pandas for data manipulation
+3) Numpy for numerical calculations
+4) Scikit-learn for building the linear regression model
+5) Train-test split for splitting the data into training and testing sets
+
+## Data Set
+The data set used in this project contains information about different properties in Pune, Maharashtra. The data set includes the following columns:
+
+1) Area
+2) Location
+3) Price
+4) Bedrooms
+5) Bathrooms
+6) Balcony
+7) Type
+
+The 'Price' column is the target variable and the other columns are the predictor variables.
 
 ## Exploratory Data Analysis
-Exploratory data analysis was performed to understand the relationship between the price and features of the properties. Price vs. Property builder and price vs. locations were analyzed to understand the relationship between these variables. The visualizations were created using the Plotly library for interactive visualizations.
+EDA was performed to gain insights into the relationships between the target variable and the predictor variables. The following visualizations were used for the EDA:
 
-## Machine Learning Model
-Linear regression was used to build the machine learning model for this project. Scikit-learn, pandas, and numpy were the main libraries used to develop the model. The dataset was not split into test and training sets, as the project was small and simple.
+Scatter plot
+Histogram
+Box plot
+The EDA revealed that the price of properties in Pune is most strongly correlated with the 'Area', 'Bedrooms', and 'Bathrooms' and categorical data like Clubhouse, availability of hospitals, parks etc near the locality columns. These columns were used as the predictor variables for the linear regression model.
 
-The accuracy of the model was 81%. The model was able to predict property prices with reasonable accuracy based on the given features.
+## Feature Engineering
+
+Feature engineering was performed to improve the performance of the linear regression model. The following feature engineering techniques were used:
+
+### Outlier removal
+
+Outliers were removed from the data set using the interquartile range (IQR) method. One-hot encoding was used to convert categorical variables such as 'Location' and 'Type' into numerical variables that could be used in the linear regression model. Feature scaling was used to normalize the predictor variables so that they had a mean of 0 and a standard deviation of 1.
+
+## Linear Regression Model
+A linear regression model was developed using scikit-learn. The data set was split into a training set and a testing set using the train-test split function. The model was trained on the training set and tested on the testing set. 
+
+The linear regression model was able to predict the price of properties in Pune with an effective degree of accuracy. The MSE was low, and the R2 score was high. This indicates that the model is a good fit for the data set and can be used to make predictions about property prices in Pune.
 
 ## Conclusion
-This machine learning project demonstrates how linear regression can be used to predict property prices in Pune. By performing exploratory data analysis, preprocessing the data, and building a machine learning model, it is possible to accurately predict the price of properties in Pune. However, it is important to note that the accuracy of the model can be improved by using a larger dataset and by including more features.
+In conclusion, this project demonstrated the effectiveness of linear regression models in predicting the price of properties in Pune, Maharashtra. The EDA and feature engineering techniques used in this project helped to improve the performance of the model. The linear regression model developed in this project can be used to make  predictions about property prices in Pune.
